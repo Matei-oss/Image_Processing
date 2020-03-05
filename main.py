@@ -14,6 +14,12 @@ filtered_img3.save("sharpen.png",'png')
 
 filtered_img4.save('gray.png','png')
 
+img_bulb = Image.open('./Pokedex/bulbasaur.jpg')
+img_bulb.show() # it should open it in a new tab
+
+rotated_img = filtered_img4.rotate(90)
+rotated_img.save('rotated.png','png')
+
 print(img.mode)
 print(img.format)
 print(img.size)
