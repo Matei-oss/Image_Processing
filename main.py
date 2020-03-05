@@ -1,8 +1,16 @@
 from PIL import Image, ImageFilter
 
+
+
 img = Image.open('./Pokedex/pikachu.jpg')
 img_bulb = Image.open('./Pokedex/bulbasaur.jpg')
 img_char = Image.open('./Pokedex/charmander.jpg')
+img_squir = Image.open('./Pokedex/squirtle.jpg')
+
+img_astro = Image.open('original.jpg')
+
+
+
 
 filtered_img = img.filter(ImageFilter.BLUR)
 filtered_img2 = img.filter(ImageFilter.SMOOTH)
@@ -33,5 +41,18 @@ cropped_img.save('cropped.png','png')
 print(img.mode)
 print(img.format)
 print(img.size)
+
+print(img_astro.size) 
+new_image = img_astro.resize((400,400))
+new_image.save('thumbnail_astro.jpg')
+print(new_image.size)
+
+new_image_2 = img_astro
+
+new_image_2.thumbnail((400,200)) # useful for social media platforms 
+
+#EXERCISE JPG TO PNG POKEDEX CONVERTER
+
+
 
 
